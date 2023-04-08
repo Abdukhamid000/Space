@@ -1,0 +1,54 @@
+@import 'globals/colors';
+@import 'home';
+@import './components/navbar';
+
+html {
+    font-size: 100%;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Barlow', sans-serif;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: $light;
+}
+
+.home,
+.destination,
+.crew,
+.technology {
+    background: url('../assets/space_background.webp') no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 40px;
+}
+
+.destination {
+    background: url('../assets/moon_background.png') no-repeat;
+    background-size: cover;
+}
+
+.crew {
+    background: url('../assets/crew_bg.png') no-repeat;
+    background-size: cover;
+}
+
+.technology {
+    background: url('../assets/technology.png') no-repeat;
+    background-size: cover;
+}
