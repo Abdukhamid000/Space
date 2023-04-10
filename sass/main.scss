@@ -27,6 +27,11 @@ a {
     color: $light;
 }
 
+.contanier {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
 .home,
 .destination,
 .crew,
@@ -51,4 +56,81 @@ a {
 .technology {
     background: url('../assets/technology.png') no-repeat;
     background-size: cover;
+}
+
+.pick-destination {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 157px;
+}
+
+.tab-box {
+    position: relative;
+
+    &__line {
+        position: absolute;
+        transition: 0.3s ease;
+        width: 61px;
+        height: 3px;
+        background: $light;
+        left: 0;
+    }
+
+    &__tab {
+        border: none;
+        background: transparent;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 2.7px;
+        color: #D0D6F9;
+        cursor: pointer;
+        padding-bottom: 12px;
+
+        &:not(:first-child) {
+            margin-left: 35px;
+        }
+
+        &.active {
+            color: $light;
+        }
+    }
+
+    &__content {
+        margin-top: 37px;
+        display: none;
+        animation: moving 0.5s ease;
+
+        @keyframes moving {
+            from {
+                transform: translateX(50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0px);
+                opacity: 1;
+            }
+        }
+
+        &.active {
+            display: block;
+        }
+    }
+
+    &__title {
+        font-size: 100px;
+        line-height: 115px;
+        color: $light;
+        font-weight: 400;
+    }
+
+    &__text {
+        margin-top: 14px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 32px;
+        color: #D0D6F9;
+    }
+
 }

@@ -35,6 +35,82 @@
           </li>
         </ul>
       </nav>
+      <div class="contanier">
+        <div class="pick-destination">
+          <div class="pick-destination__showSide">
+            <h2>01 Pick your destination</h2>
+            <img src="./assets/moon.png" alt="moon" />
+          </div>
+          <div class="pick-destination__contentSide">
+            <div class="tab-box">
+              <button class="tab-box__tab active" id="tab">MOON</button>
+              <button class="tab-box__tab" id="tab">MARS</button>
+              <button class="tab-box__tab" id="tab">EUROPA</button>
+              <button class="tab-box__tab" id="tab">TITAN</button>
+              <div class="tab-box__line" id="line"></div>
+
+              <div class="tab-box__content active" id="content">
+                <h1 class="tab-box__title">MOON</h1>
+                <p class="tab-box__text">
+                  See our planet as you’ve never seen it before. A perfect
+                  relaxing trip away to help regain perspective and come back
+                  refreshed. While you’re there, take in some history by
+                  visiting the Luna 2 and Apollo 11 landing sites.
+                </p>
+              </div>
+              <div class="tab-box__content" id="content">
+                <h1 class="tab-box__title">MARS</h1>
+                <p class="tab-box__text">
+                  See our planet as you’ve never seen it before. A perfect
+                  relaxing trip away to help regain perspective and come back
+                  refreshed. While you’re there, take in some history by
+                  visiting the Luna 2 and Apollo 11 landing sites.
+                </p>
+              </div>
+              <div class="tab-box__content" id="content">
+                <h1 class="tab-box__title">EUROPA</h1>
+                <p class="tab-box__text">
+                  See our planet as you’ve never seen it before. A perfect
+                  relaxing trip away to help regain perspective and come back
+                  refreshed. While you’re there, take in some history by
+                  visiting the Luna 2 and Apollo 11 landing sites.
+                </p>
+              </div>
+              <div class="tab-box__content" id="content">
+                <h1 class="tab-box__title">TITAN</h1>
+                <p class="tab-box__text">
+                  See our planet as you’ve never seen it before. A perfect
+                  relaxing trip away to help regain perspective and come back
+                  refreshed. While you’re there, take in some history by
+                  visiting the Luna 2 and Apollo 11 landing sites.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+    <script>
+      const tabs = document.querySelectorAll("#tab");
+      const line = document.querySelector("#line");
+      const allContent = document.querySelectorAll("#content");
+
+      tabs.forEach((el, i) => {
+        el.addEventListener("click", () => {
+          tabs.forEach((el, i) => {
+            el.classList.remove("active");
+            allContent[i].classList.remove("active");
+          });
+          allContent[i].classList.add("active");
+
+          el.classList.add("active");
+          line.style.left = el.offsetLeft + "px";
+        });
+      });
+
+      // function handleClick(tab) {
+      //   tab.classList.add("active");
+      // }
+    </script>
   </body>
 </html>

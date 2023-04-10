@@ -13,19 +13,28 @@
 
     &__link {
         padding: 36px 0;
-    }
-
-    &__link.navbar__link_underline {
         position: relative;
 
         &::after {
             content: "";
+            transition: 0.3s ease;
             position: absolute;
             background: #fff;
             bottom: 0;
+            width: 0%;
             left: 0;
             height: 2px;
+        }
+
+        &:hover::after {
+            opacity: 0.5;
             width: 100%;
+        }
+
+        &.navbar__link_underline {
+            &::after {
+                width: 100%;
+            }
         }
     }
 }
