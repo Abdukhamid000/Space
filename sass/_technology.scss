@@ -1,0 +1,92 @@
+.technology {
+    padding-bottom: 162px;
+
+    &__title {
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 34px;
+        /* identical to box height */
+        letter-spacing: 4.725px;
+        color: #FFFFFF;
+    }
+
+    .container {
+        margin-top: 76px;
+
+        .slider {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            &__content {
+                display: none;
+
+                &.active {
+                    display: block;
+                }
+            }
+
+            &__bullets>div {
+                cursor: pointer;
+                border: 1px solid #FFFFFF;
+                color: #fff;
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 32px;
+                line-height: 37px;
+
+                &:not(:first-child) {
+                    margin-top: 32px;
+                }
+
+                &.active {
+                    color: #0B0D17;
+
+                    background: #fff;
+                }
+            }
+
+            &__title {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 19px;
+                letter-spacing: 2.7px;
+
+                color: #D0D6F9;
+            }
+
+
+            &__heading {
+                font-family: 'Bellefair', serif;
+                ;
+                margin-top: 11px;
+                margin-bottom: 17px;
+                font-weight: 400;
+                font-size: 56px;
+                line-height: 64px;
+                color: #FFFFFF;
+            }
+
+            &__text {
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 32px;
+                color: #D0D6F9;
+                max-width: 444px;
+            }
+        }
+    }
+
+    &__image-side>img {
+        display: none;
+
+    }
+
+    &__image-side>img.active {
+        display: block;
+    }
+}

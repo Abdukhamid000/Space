@@ -12,6 +12,12 @@
       href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="technology">
@@ -35,6 +41,94 @@
           </li>
         </ul>
       </nav>
+      <div class="container">
+        <h3 class="technology__title">SPACE LAUNCH 101</h3>
+        <div class="slider">
+          <div class="slider__bullets">
+            <div class="active" id="bullet">
+              <span> 1 </span>
+            </div>
+            <div class="" id="bullet">
+              <span> 2 </span>
+            </div>
+            <div class="" id="bullet">
+              <span> 3 </span>
+            </div>
+          </div>
+          <div class="slider__content active" id="content">
+            <span class="slider__title">THE TERMINOLOGY…</span>
+            <h1 class="slider__heading">LAUNCH VEHICLE</h1>
+            <p class="slider__text">
+              A launch vehicle or carrier rocket is a rocket-propelled vehicle
+              used to carry a payload from Earth's surface to space, usually to
+              Earth orbit or beyond. Our WEB-X carrier rocket is the most
+              powerful in operation. Standing 150 metres tall, it's quite an
+              awe-inspiring sight on the launch pad!
+            </p>
+          </div>
+          <div class="slider__content" id="content">
+            <span class="slider__title">THE TERMINOLOGY…</span>
+            <h1 class="slider__heading">SPACEPORT</h1>
+            <p class="slider__text">
+              A spaceport or cosmodrome is a site for launching (or receiving)
+              spacecraft, by analogy to the seaport for ships or airport for
+              aircraft. Based in the famous Cape Canaveral, our spaceport is
+              ideally situated to take advantage of the Earth’s rotation for
+              launch.
+            </p>
+          </div>
+          <div class="slider__content" id="content">
+            <span class="slider__title">THE TERMINOLOGY…</span>
+            <h1 class="slider__heading">SPACE CAPSULE</h1>
+            <p class="slider__text">
+              A space capsule is an often-crewed spacecraft that uses a
+              blunt-body reentry capsule to reenter the Earth's atmosphere
+              without wings. Our capsule is where you'll spend your time during
+              the flight. It includes a space gym, cinema, and plenty of other
+              activities to keep you entertained.
+            </p>
+          </div>
+          <div class="technology__image-side">
+            <img
+              src="./assets/rocket.png"
+              class="active"
+              alt="rocket"
+              id="image"
+            />
+            <img
+              src="./assets/space-port.png"
+              class=""
+              alt="rocket"
+              id="image"
+            />
+            <img
+              src="./assets/space-capsule.png"
+              class=""
+              alt="rocket"
+              id="image"
+            />
+          </div>
+        </div>
+      </div>
     </div>
+
+    <script>
+      const bullet = document.querySelectorAll("#bullet");
+      const allContent = document.querySelectorAll("#content");
+      const image = document.querySelectorAll("#image");
+
+      bullet.forEach((el, i) => {
+        el.addEventListener("click", () => {
+          bullet.forEach((el, i) => {
+            allContent[i].classList.remove("active");
+            el.classList.remove("active");
+            image[i].classList.remove("active");
+          });
+          image[i].classList.add("active");
+          allContent[i].classList.add("active");
+          el.classList.add("active");
+        });
+      });
+    </script>
   </body>
 </html>
