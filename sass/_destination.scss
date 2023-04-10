@@ -1,0 +1,17 @@
+.destination {
+    background: url('../assets/moon_background.png') no-repeat;
+    background-size: cover;
+    padding-bottom: 162px;
+
+    &__title {
+        margin-top: 76px;
+        margin-bottom: 66px;
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 34px;
+        letter-spacing: 4.725px;
+        text-transform: uppercase;
+        color: $light;
+        text-align: left;
+    }
+}

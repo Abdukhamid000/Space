@@ -1,4 +1,9 @@
 .home {
+    background: url('../assets/space_background.webp') no-repeat;
+    background-size: cover;
+    padding-top: 40px;
+    padding-bottom: 162px;
+
     .container {
         display: flex;
         justify-content: space-between;
