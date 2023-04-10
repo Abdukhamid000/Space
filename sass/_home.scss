@@ -1,0 +1,61 @@
+.home {
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 251px;
+    }
+
+    &__question-text {
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 34px;
+        /* identical to box height */
+
+        letter-spacing: 4.725px;
+
+        color: #D0D6F9;
+    }
+
+    &__heading {
+        font-weight: 400;
+        font-size: 150px;
+        line-height: 172px;
+        margin: 24px 0;
+        color: #FFFFFF;
+    }
+
+    &__explore-ellipse {
+        background: #fff;
+        width: 274px;
+        height: 274px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        &>span {
+            font-weight: 400;
+            font-size: 32px;
+            line-height: 37px;
+            /* identical to box height */
+
+            letter-spacing: 2px;
+
+            color: #0B0D17;
+
+        }
+    }
+
+    &__text {
+        max-width: 444px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 32px;
+        /* or 178% */
+
+        color: #D0D6F9;
+
+    }
+}

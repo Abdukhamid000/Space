@@ -35,19 +35,47 @@
           </li>
         </ul>
       </nav>
-      <div class="contanier">
+      <div class="container">
         <h2 class="destination__title">01 Pick your destination</h2>
         <div class="pick-destination">
           <div class="pick-destination__showSide">
-            <img
-              src="./assets/moon.png"
-              class="active"
-              alt="moon"
-              id="planet"
-            />
-            <img src="./assets/mars.png" class="" alt="moon" id="planet" />
-            <img src="./assets/europa.png" class="" alt="moon" id="planet" />
-            <img src="./assets/titan.png" class="" alt="moon" id="planet" />
+            <div class="atropos my-atropos">
+              <!-- scale container (required) -->
+              <div class="atropos-scale">
+                <!-- rotate container (required) -->
+                <div class="atropos-rotate">
+                  <!-- inner container (required) -->
+                  <div class="atropos-inner">
+                    <img
+                      src="./assets/moon.png"
+                      class="active"
+                      alt="moon"
+                      id="planet"
+                    />
+                    <img
+                      src="./assets/mars.png"
+                      class=""
+                      alt="moon"
+                      id="planet"
+                    />
+                    <img
+                      src="./assets/europa.png"
+                      alt="mars"
+                      class=""
+                      id="planet"
+                    />
+                    <img
+                      src="./assets/titan.png"
+                      class=""
+                      alt="moon"
+                      id="planet"
+                    />
+
+                    <!-- put your custom content here -->
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="pick-destination__contentSide">
             <div class="tab-box">
@@ -142,11 +170,23 @@
         </div>
       </div>
     </div>
+
+    <script type="module">
+      import atropos from "https://cdn.jsdelivr.net/npm/atropos@1.0.2/+esm";
+
+      const myAtropos = atropos({
+        el: ".my-atropos",
+        rotate: true,
+        rotateXMax: 20,
+        rotateYMax: 20,
+      });
+    </script>
     <script>
       const tabs = document.querySelectorAll("#tab");
       const line = document.querySelector("#line");
       const allContent = document.querySelectorAll("#content");
       const planets = document.querySelectorAll("#planet");
+      console.log(planets);
 
       tabs.forEach((el, i) => {
         el.addEventListener("click", () => {
