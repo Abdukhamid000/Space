@@ -12,27 +12,42 @@
       href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="home">
-      <nav class="navbar">
+      <nav class="navbar mobile" id="mobile_menu">
         <ul class="navbar__menu">
           <li class="navbar__item">
             <a class="navbar__link navbar__link_underline" href="/index.html"
-              >00 HOME</a
+              >HOME</a
             >
           </li>
           <li class="navbar__item">
-            <a class="navbar__link" href="/destination.html">01 DESTINATION</a>
+            <a class="navbar__link" href="/destination.html">DESTINATION</a>
           </li>
           <li class="navbar__item">
-            <a class="navbar__link" href="/crew.html">02 CREW</a>
+            <a class="navbar__link" href="/crew.html">CREW</a>
           </li>
           <li class="navbar__item">
-            <a class="navbar__link" href="/technology.html">03 TECHNOLOGY</a>
+            <a class="navbar__link" href="/technology.html">TECHNOLOGY</a>
           </li>
         </ul>
       </nav>
+      <span id="humberger">
+        <img src="./assets/toggler.svg" alt="toggler" />
+      </span>
       <div class="container">
         <div class="home__content">
           <span class="home__question-text">SO, YOU WANT TO TRAVEL TO</span>
@@ -45,9 +60,18 @@
           </p>
         </div>
         <div class="home__explore-ellipse">
-            <span>EXPLORE</span>
+          <span>EXPLORE</span>
         </div>
       </div>
     </div>
+
+    <script>
+      const menu = document.querySelector("#mobile_menu");
+      const menuBtn = document
+        .querySelector("#humberger")
+        .addEventListener("click", (e) => {
+          menu.classList.toggle("mobile");
+        });
+    </script>
   </body>
 </html>

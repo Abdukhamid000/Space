@@ -1,0 +1,51 @@
+@mixin heading($size: 100px, $weight: 400, $line: 115px, $font: 'Bellefair') {
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $line;
+    font-family: $font, sans-serif;
+
+    @media (max-width: 1024px) {
+        font-size: 80px;
+        line-height: 92px;
+        text-align: center;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 56px;
+        line-height: 64px;
+    }
+}
+
+@mixin text($size: 18px, $line: 32px, $font: 'Barlow', $weight: 400) {
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $line;
+    font-family: $font, sans-serif;
+}
+
+@mixin barlowCondensedText($size: 16px, $line: 19px, $letter: 2.7px, $font: 'Barlow Condensed', $weight: 400) {
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $line;
+    letter-spacing: $letter;
+    font-family: $font, sans-serif;
+}
+
+@mixin barlowText($size: 18px, $line: 32px, $font: 'Barlow', $weight: 400) {
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $line;
+    font-family: $font, sans-serif;
+
+    @media (max-width: 1024px) {
+        font-size: 16px;
+        line-height: 28px;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 15px;
+        line-height: 25px;
+    }
+}

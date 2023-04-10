@@ -1,3 +1,6 @@
+@import 'mixins';
+
+
 .destination {
     background: url('../assets/moon_background.png') no-repeat;
     background-size: cover;
@@ -14,5 +17,223 @@
         text-transform: uppercase;
         color: $light;
         text-align: left;
+
+        @media (max-width: 1024px) {
+            text-align: center;
+            margin-bottom: 32px;
+            font-size: 16px;
+            line-height: 19px;
+            letter-spacing: 2.7px;
+        }
     }
+
+    .pick-destination {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 157px;
+
+        @media (max-width: 1024px) {
+            flex-direction: column;
+            gap: 50px;
+        }
+
+
+        &__showSide img {
+            display: none;
+            animation: moving 0.5s ease;
+
+            @media (max-width: 1024px) {
+                width: 300px;
+                height: 300px
+            }
+
+            @media (max-width: 768px) {
+                width: 170px;
+                height: 170px
+            }
+
+            @keyframes moving {
+                from {
+                    transform: translateX(50px);
+                    opacity: 0;
+                }
+
+                to {
+                    transform: translateX(0px);
+                    opacity: 1;
+                }
+            }
+        }
+
+        &__showSide img.active {
+            display: block;
+        }
+    }
+
+    .tab-box {
+        position: relative;
+
+        &__tabs {
+            display: flex;
+            align-items: center;
+
+
+            @media (max-width: 1024px) {
+                justify-content: center;
+            }
+        }
+
+        &__line {
+            position: absolute;
+            transition: 0.3s ease;
+            width: 41.63px;
+            height: 3px;
+            background: $light;
+            left: 0;
+        }
+
+        &__tab {
+            border: none;
+            background: transparent;
+            @include barlowCondensedText();
+            color: #D0D6F9;
+            cursor: pointer;
+            padding-bottom: 12px;
+
+
+            &:not(:first-child) {
+                margin-left: 35px;
+            }
+
+            &.active {
+                color: $light;
+            }
+        }
+
+
+
+        &__content {
+            margin-top: 37px;
+            display: none;
+            animation: moving 0.5s ease;
+            max-width: 444px;
+
+
+
+            @keyframes moving {
+                from {
+                    transform: translateX(50px);
+                    opacity: 0;
+                }
+
+                to {
+                    transform: translateX(0px);
+                    opacity: 1;
+                }
+            }
+
+            &.active {
+                display: block;
+            }
+
+            @media (max-width: 1024px) {
+                &.active {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    max-width: 100%;
+                }
+
+
+            }
+        }
+
+        &__info {
+            margin-top: 28px;
+            display: flex;
+            align-items: center;
+            gap: 85px;
+
+            @media (max-width: 768px) {
+                flex-direction: column;
+                gap: 32px;
+            }
+        }
+
+
+        &__distance {
+            &>span {
+                font-weight: 400;
+                font-size: 28px;
+                line-height: 32px;
+                text-transform: uppercase;
+                color: $light;
+            }
+
+            &>p {
+                font-family: 'Barlow Condensed', sans-serif;
+                margin-bottom: 12px;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 17px;
+                letter-spacing: 2.3625px;
+                text-transform: uppercase;
+                color: #D0D6F9;
+            }
+        }
+
+        &__time {
+            &>span {
+                font-weight: 400;
+                font-size: 28px;
+                line-height: 32px;
+                text-transform: uppercase;
+                color: $light;
+            }
+
+            &>p {
+                font-family: 'Barlow Condensed', sans-serif;
+                margin-bottom: 12px;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 17px;
+                letter-spacing: 2.3625px;
+                text-transform: uppercase;
+                color: #D0D6F9;
+            }
+        }
+
+        &__title {
+            @include heading();
+            color: $light;
+        }
+
+        &__text {
+            @include barlowText();
+            padding-bottom: 56px;
+            border-bottom: 1px solid #383B4B;
+            margin-top: 14px;
+            color: #D0D6F9;
+
+        }
+
+
+        @media (max-width: 1024px) {
+
+
+            // &__title {
+            //     @include heading(56px, 400, 64px);
+            //     text-align: center;
+            // }
+
+            // &__text {
+            //     text-align: center;
+            //     @include text(15px, 400, 25px)
+            // }
+        }
+
+    }
+
 }
