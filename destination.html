@@ -36,10 +36,18 @@
         </ul>
       </nav>
       <div class="contanier">
+        <h2 class="destination__title">01 Pick your destination</h2>
         <div class="pick-destination">
           <div class="pick-destination__showSide">
-            <h2>01 Pick your destination</h2>
-            <img src="./assets/moon.png" alt="moon" />
+            <img
+              src="./assets/moon.png"
+              class="active"
+              alt="moon"
+              id="planet"
+            />
+            <img src="./assets/mars.png" class="" alt="moon" id="planet" />
+            <img src="./assets/europa.png" class="" alt="moon" id="planet" />
+            <img src="./assets/titan.png" class="" alt="moon" id="planet" />
           </div>
           <div class="pick-destination__contentSide">
             <div class="tab-box">
@@ -57,6 +65,17 @@
                   refreshed. While you’re there, take in some history by
                   visiting the Luna 2 and Apollo 11 landing sites.
                 </p>
+
+                <div class="tab-box__info">
+                  <div class="tab-box__distance">
+                    <p>AVG. DISTANCE</p>
+                    <span>1.6 BIL. km</span>
+                  </div>
+                  <div class="tab-box__time">
+                    <p>Est. travel time</p>
+                    <span>7 YEARS</span>
+                  </div>
+                </div>
               </div>
               <div class="tab-box__content" id="content">
                 <h1 class="tab-box__title">MARS</h1>
@@ -66,6 +85,17 @@
                   refreshed. While you’re there, take in some history by
                   visiting the Luna 2 and Apollo 11 landing sites.
                 </p>
+
+                <div class="tab-box__info">
+                  <div class="tab-box__distance">
+                    <p>AVG. DISTANCE</p>
+                    <span>1.6 BIL. km</span>
+                  </div>
+                  <div class="tab-box__time">
+                    <p>Est. travel time</p>
+                    <span>7 YEARS</span>
+                  </div>
+                </div>
               </div>
               <div class="tab-box__content" id="content">
                 <h1 class="tab-box__title">EUROPA</h1>
@@ -75,6 +105,17 @@
                   refreshed. While you’re there, take in some history by
                   visiting the Luna 2 and Apollo 11 landing sites.
                 </p>
+
+                <div class="tab-box__info">
+                  <div class="tab-box__distance">
+                    <p>AVG. DISTANCE</p>
+                    <span>1.6 BIL. km</span>
+                  </div>
+                  <div class="tab-box__time">
+                    <p>Est. travel time</p>
+                    <span>7 YEARS</span>
+                  </div>
+                </div>
               </div>
               <div class="tab-box__content" id="content">
                 <h1 class="tab-box__title">TITAN</h1>
@@ -84,6 +125,17 @@
                   refreshed. While you’re there, take in some history by
                   visiting the Luna 2 and Apollo 11 landing sites.
                 </p>
+
+                <div class="tab-box__info">
+                  <div class="tab-box__distance">
+                    <p>AVG. DISTANCE</p>
+                    <span>1.6 BIL. km</span>
+                  </div>
+                  <div class="tab-box__time">
+                    <p>Est. travel time</p>
+                    <span>7 YEARS</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -94,16 +146,20 @@
       const tabs = document.querySelectorAll("#tab");
       const line = document.querySelector("#line");
       const allContent = document.querySelectorAll("#content");
+      const planets = document.querySelectorAll("#planet");
 
       tabs.forEach((el, i) => {
         el.addEventListener("click", () => {
           tabs.forEach((el, i) => {
             el.classList.remove("active");
             allContent[i].classList.remove("active");
+            planets[i].classList.remove("active");
           });
+          planets[i].classList.add("active");
           allContent[i].classList.add("active");
 
           el.classList.add("active");
+          line.style.width = el.offsetWidth + "px";
           line.style.left = el.offsetLeft + "px";
         });
       });

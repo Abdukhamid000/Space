@@ -38,14 +38,25 @@ a {
 .technology {
     background: url('../assets/space_background.webp') no-repeat;
     background-size: cover;
-    width: 100vw;
-    height: 100vh;
     padding-top: 40px;
+    padding-bottom: 162px;
 }
 
 .destination {
     background: url('../assets/moon_background.png') no-repeat;
     background-size: cover;
+
+    &__title {
+        margin-top: 76px;
+        margin-bottom: 66px;
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 34px;
+        letter-spacing: 4.725px;
+        text-transform: uppercase;
+        color: $light;
+        text-align: left;
+    }
 }
 
 .crew {
@@ -58,11 +69,34 @@ a {
     background-size: cover;
 }
 
+
+
 .pick-destination {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 157px;
+
+    &__showSide>img {
+        display: none;
+        animation: moving 0.5s ease;
+
+        @keyframes moving {
+            from {
+                transform: translateX(50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0px);
+                opacity: 1;
+            }
+        }
+    }
+
+    &__showSide>img.active {
+        display: block;
+    }
 }
 
 .tab-box {
@@ -100,6 +134,7 @@ a {
         margin-top: 37px;
         display: none;
         animation: moving 0.5s ease;
+        max-width: 444px;
 
         @keyframes moving {
             from {
@@ -118,6 +153,53 @@ a {
         }
     }
 
+    &__info {
+        margin-top: 28px;
+        display: flex;
+        align-items: center;
+        gap: 85px;
+    }
+
+    &__distance {
+        &>span {
+            font-weight: 400;
+            font-size: 28px;
+            line-height: 32px;
+            text-transform: uppercase;
+            color: $light;
+        }
+
+        &>p {
+            margin-bottom: 12px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+            letter-spacing: 2.3625px;
+            text-transform: uppercase;
+            color: #D0D6F9;
+        }
+    }
+
+    &__time {
+        &>span {
+            font-weight: 400;
+            font-size: 28px;
+            line-height: 32px;
+            text-transform: uppercase;
+            color: $light;
+        }
+
+        &>p {
+            margin-bottom: 12px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+            letter-spacing: 2.3625px;
+            text-transform: uppercase;
+            color: #D0D6F9;
+        }
+    }
+
     &__title {
         font-size: 100px;
         line-height: 115px;
@@ -126,6 +208,8 @@ a {
     }
 
     &__text {
+        padding-bottom: 56px;
+        border-bottom: 1px solid #383B4B;
         margin-top: 14px;
         font-weight: 400;
         font-size: 18px;
