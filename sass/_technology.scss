@@ -10,7 +10,12 @@
         letter-spacing: 4.725px;
         color: #FFFFFF;
 
-
+        @media (max-width: 1024px) {
+            font-size: 20px;
+            line-height: 24px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
     }
 
     .container {
@@ -74,6 +79,11 @@
                 line-height: 37px;
                 transition: 0.3s ease;
 
+                @media (max-width: 1024px) {
+                    width: 60px;
+                    height: 60px;
+                }
+
                 &:not(:first-child) {
                     margin-top: 32px;
 
@@ -118,6 +128,8 @@
 
                 @media (max-width: 1024px) {
                     text-align: center;
+                    font-size: 40px;
+                    line-height: 46px;
                 }
 
             }

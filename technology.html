@@ -28,15 +28,17 @@
   <body>
     <div class="technology">
       <div class="logo">
-        <a href="#">
+        <a href="./index.html">
           <img src="./assets/logo.svg" alt="" />
         </a>
       </div>
 
-      <nav class="navbar">
+      <nav class="navbar" id="mobile_menu">
         <ul class="navbar__menu">
           <li class="navbar__item">
-            <a class="navbar__link" href="/index.html">HOME</a>
+            <a class="navbar__link" aria-label="link" href="/index.html"
+              >HOME</a
+            >
           </li>
           <li class="navbar__item">
             <a class="navbar__link" href="/destination.html">DESTINATION</a>
@@ -53,6 +55,9 @@
           </li>
         </ul>
       </nav>
+      <span id="humberger">
+        <img src="./assets/toggler.svg" alt="toggler" />
+      </span>
       <div class="container">
         <h3 class="technology__title">SPACE LAUNCH 101</h3>
         <div class="slider">
@@ -127,6 +132,7 @@
       </div>
     </div>
 
+    <script src="./app.js"></script>
     <script>
       const bullet = document.querySelectorAll("#bullet");
       const allContent = document.querySelectorAll("#content");

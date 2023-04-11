@@ -37,7 +37,7 @@
         </a>
       </div>
 
-      <nav class="navbar">
+      <nav class="navbar" id="mobile_menu">
         <ul class="navbar__menu">
           <li class="navbar__item">
             <a class="navbar__link" href="/index.html">HOME</a>
@@ -55,6 +55,9 @@
           </li>
         </ul>
       </nav>
+      <span id="humberger">
+        <img src="./assets/toggler.svg" alt="toggler" />
+      </span>
       <div class="container">
         <div class="swiper mySwiper">
           <span>02 Meet your crew</span>
@@ -128,6 +131,7 @@
         </div>
       </div>
     </div>
+    <script src="./app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script>
       var swiper = new Swiper(".mySwiper", {

@@ -32,6 +32,13 @@
         letter-spacing: 4.725px;
         text-transform: uppercase;
         color: #FFFFFF;
+
+        @media (max-width: 768px) {
+            font-size: 16px;
+            line-height: 19px;
+            text-align: center;
+            display: block;
+        }
     }
 
     &__commander-text {
