@@ -92,6 +92,12 @@
         }
     }
 
+
+    &__explore-ellipse:hover {
+        box-shadow: 35px 40px 40px #888888;
+    }
+
+
     &__text {
         max-width: 444px;
         @include barlowText();

@@ -28,29 +28,32 @@
 
     }
 
-    &.mobile {
-        position: fixed;
-        display: block;
-        flex-direction: column;
-        right: 0;
-        top: 0;
-        z-index: 999;
-        width: 60%;
-        height: 100vh;
-        background: rgba(255, 255, 255, 0.04);
-        backdrop-filter: blur(40.7742px);
-        transition: all 0.5s ease;
+    @media (max-width: 768px) {
+        &.mobile {
+            position: fixed;
+            display: block;
+            flex-direction: column;
+            right: 0;
+            top: 0;
+            z-index: 999;
+            width: 60%;
+            height: 100vh;
+            background: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(40.7742px);
+            transition: all 0.5s ease;
+        }
+
+        &.mobile &__menu {
+            flex-direction: column;
+            align-items: flex-start;
+            row-gap: 32px;
+        }
+
+        &.mobile &__link {
+            padding: 0
+        }
     }
 
-    &.mobile &__menu {
-        flex-direction: column;
-        align-items: flex-start;
-        row-gap: 32px;
-    }
-
-    &.mobile &__link {
-        padding: 0
-    }
 
     &__link {
         @include barlowCondensedText();
@@ -83,6 +86,10 @@
 
 #humberger {
     margin-left: 15px;
+    position: absolute;
+    right: 20px;
+    z-index: 999;
+    top: 33px;
 }
 
 @media (min-width: 768px) {
